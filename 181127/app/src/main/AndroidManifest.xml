@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.coha.google">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="com.androidtutorialpoint.mymapsappsdirection.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+
+
+
+    <meta-data
+        android:name="com.google.android.gms.version"
+        android:value="AIzaSyDIPfmJXw78A2tKbCtGZekNxAQcli7eoLM" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@drawable/appby"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.DayNight">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBVAh-rJPsBHbKlRAs6oMtFc6ZQy6bZ2kg" />
+
+
+        <activity
+            android:name=".MainBoardActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".BoardInsertActivity"
+            android:label="InsertActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name=".reply.BoardView"
+            android:label="ViewBoard"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name=".login.Login"
+            android:label="Login"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name=".login.CheckLoginState"
+            android:label="LoginCheck"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name=".login.JoinUser"
+            android:label="JoinUser"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <service
+            android:name=".push.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name=".push.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <service android:name=".push.DeleteTokenService">
+
+        </service>
+
+
+        <activity
+            android:name=".Splashscreen"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity"
+            android:theme="@style/NoTitle01">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".HomeActivity"
+            android:theme="@style/NoTitle01"/>
+        <activity android:name=".Urltextview"></activity>
+        <service
+            android:name=".ClientService"
+            android:enabled="true"
+            android:exported="true"></service>
+        <activity android:name=".WeatherActivity"
+            android:theme="@style/NoTitle01"/>
+        <activity android:name=".NoticeActivity"
+            android:theme="@style/NoTitle01"/>
+    </application>
+
+</manifest>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_activity_home"
+            android:icon="@drawable/ic_map"
+            android:title="지도" />
+        <item
+            android:id="@+id/nav_activity_login"
+            android:icon="@drawable/ic_login"
+            android:title="로그인" />
+        <item
+            android:id="@+id/nav_activity_main"
+            android:icon="@drawable/ic_pencil"
+            android:title="게시판" />
+        <item
+            android:id="@+id/nav_activity_weather"
+            android:icon="@drawable/ic_weather"
+            android:title="날씨" />
+    </group>
+
+    <item android:title="개발">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_goo"
+                android:title="공지사항" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="건의사항" />
+        </menu>
+    </item>
+
+</menu>

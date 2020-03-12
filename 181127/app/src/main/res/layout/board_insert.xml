@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/board_list_and_header"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1">
+
+        <TextView
+            android:text="  제목 :  "
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/textView_title"
+            android:layout_weight="1.08"
+            android:textStyle="normal|bold"
+            android:textSize="20dp"
+            android:layout_margin="5dp"
+            android:maxLength="30"
+            android:textAlignment="center" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/title_editText"
+            android:layout_weight="1.08"
+            android:background="@android:color/white"
+            android:layout_margin="5dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.15"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:gravity="right">
+
+        <TextView
+            android:text="작성자 :"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/textView_writer"
+            android:textStyle="normal|bold"
+            android:textAlignment="center"
+            android:gravity="center_vertical"
+            android:layout_weight="0.17"
+            android:textSize="17dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/writerID_textView"
+            android:layout_weight="0.97"
+
+            android:textStyle="normal|bold|italic"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:weightSum="1"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:padding="7dp">
+
+        <TextView
+            android:text="내용 "
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/textView_memo"
+            android:textStyle="normal|bold"
+            android:textSize="16dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/memo_editText"
+            android:layout_weight="0.82"
+            android:background="@android:color/white"
+            android:layout_height="350dp"
+            android:fontFamily="sans-serif"
+            android:textSize="20sp"
+            android:gravity="top|left"
+            android:lines="30"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.25"
+        android:padding="5dp"
+        android:visibility="visible">
+
+        <Button
+            android:text="저장"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/insert_save_Btn"
+            android:layout_weight="1"
+            android:onClick="onClick" />
+
+        <Button
+            android:text="나가기"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/insert_exit_Btn"
+            android:layout_weight="1"
+            android:onClick="onClick" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/xml_border"
+        android:layout_weight="0.9"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="#FFC7D1CD"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp">
+
+            <TextView
+                android:text="제목 : "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView16"
+                android:layout_weight="1.00"
+                android:textStyle="normal|bold"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/viewBoard_textView_title"
+                android:layout_weight="1.00"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="2dp"
+            android:background="#FFC7D1CD"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp">
+
+                <TextView
+                    android:text="글 번호"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/viewBoard_textView_boardNum"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:text="좋아요"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/viewBoard_textView_good"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/viewBoard_textView_date"
+                    android:text="날짜"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:gravity="center_vertical|center_horizontal">
+
+                <TextView
+                    android:text="작성자"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/viewBoard_textView_writer"
+                    android:layout_weight="0.8"
+                    android:layout_width="0dp" />
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:visibility="visible"
+                    android:layout_weight="0.2"
+                    android:id="@+id/modi_Frame">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <Button
+                            android:text="삭제"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/board_delete_Btn"
+                            android:textSize="12dp"
+                            android:onClick="onClick" />
+                    </LinearLayout>
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/xml_border"
+        android:layout_weight="0.25">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.70"
+            android:weightSum="1"
+            android:background="@drawable/xml_border"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/viewBoard_textView_board"
+
+
+                android:fontFamily="sans-serif"
+                android:background="@color/view"
+                android:layout_margin="5dp"
+                android:textSize="18sp"
+
+                android:layout_height="match_parent"
+                android:layout_weight="1.00"
+                android:maxLines="40"
+
+                />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.05"
+                android:background="@drawable/xml_border"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+                <Button
+                    android:text="좋아요"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/board_good_Btn"
+                    android:layout_weight="1"
+                    android:onClick="onClick" />
+
+                <Button
+                    android:text="댓글 보기"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/reply_write_Btn"
+                    android:layout_weight="1"
+                    android:onClick="onClick" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.23"
+                android:visibility="gone"
+                android:id="@+id/frameLayout">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="1"
+                    android:visibility="invisible"
+                    android:id="@+id/writeReply_Layout"
+                    android:background="@color/view">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/reply_write_editText"
+                        android:layout_weight="0.99"
+                        android:hint="댓글을 입력하세요."
+                        android:background="@android:color/white"
+                        android:layout_margin="3dp" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:text="댓글쓰기"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/reply_write_finish_Btn"
+                            android:layout_weight="1"
+                            android:onClick="onClick"/>
+
+                        <Button
+                            android:text="취소"
+                            android:layout_width="158dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/reply_cancel_Btn"
+                            android:layout_weight="1"
+                            android:onClick="onClick"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:id="@+id/listView_reply"
+                    android:layout_margin="5dp"
+                    android:background="@color/view"
+                    android:layout_height="133dp" />
+            </FrameLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

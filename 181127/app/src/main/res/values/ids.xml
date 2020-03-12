@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="nav_activity_main" type="id" />
+    <item name="nav_activity_home" type="id" />
+    <item name="nav_activity_login" type="id" />
+    <item name="nav_activity_weather" type="id" />
+    <item name="content_main" type="id" />
+</resources>

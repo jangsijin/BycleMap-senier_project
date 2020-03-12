@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical">
+
+    <ImageButton
+        android:id="@+id/homego"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="false"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:layout_weight="0.1"
+        android:background="@mipmap/homego"
+        android:onClick="onClicked" />
+    <ImageButton
+        android:layout_width="30dp"
+        android:layout_alignParentRight="false"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/ic_cached_black_24dp"
+        android:layout_weight="0.1"
+        android:id="@+id/home_Btn"
+        android:layout_height="40dp"
+        android:onClick="onClick" />
+
+
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_centerInParent="true"
+        android:layout_weight="0.8"
+        android:layout_height="40dp"
+        android:background="@mipmap/title" />
+
+    <ImageButton
+        android:layout_width="30dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:background="@mipmap/setting"
+        android:layout_weight="0.1"
+        android:id="@+id/login_Btn"
+        android:onClick="onClick"
+        android:layout_height="40dp" />
+</LinearLayout>

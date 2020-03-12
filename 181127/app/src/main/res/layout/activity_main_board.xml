@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main_board"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.coha.google.MainBoardActivity"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:fillViewport="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.1">
+
+                <LinearLayout
+                    android:id="@+id/search_LinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/xml_border"
+                    android:orientation="horizontal"
+                    android:visibility="invisible"
+                    android:weightSum="1">
+
+                    <ImageButton
+                        android:id="@+id/menu_Back_Btn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.15"
+                        android:background="@mipmap/before1"
+                        android:onClick="onClick" />
+
+                    <EditText
+                        android:id="@+id/Search_editText"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.6"
+                        android:ems="10"
+                        android:hint="제목을 검색하세요."
+                        android:inputType="textPersonName" />
+
+                    <ImageButton
+                        android:id="@+id/clearBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        android:background="@android:color/transparent"
+                        android:onClick="onClick"
+                        app:srcCompat="@mipmap/clear" />
+
+                    <ImageButton
+                        android:id="@+id/itemSearchStart_Btn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.15"
+                        android:background="@mipmap/search"
+                        android:onClick="onClick" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/menu_Btn_LinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/xml_border"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:weightSum="1">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.04" />
+
+                    <ImageButton
+                        android:id="@+id/itemSearch_Btn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="30dp"
+                        android:layout_weight="0.20"
+                        android:background="@mipmap/search"
+                        android:onClick="onClick" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.04" />
+
+                    <Spinner
+                        android:id="@+id/sort_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:entries="@array/sort" />
+
+                    <ImageButton
+                        android:id="@+id/sort_ImageBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="30dp"
+                        android:layout_weight="0.20"
+                        android:background="@mipmap/oder"
+                        android:onClick="onClick" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.04" />
+
+                    <ImageButton
+                        android:id="@+id/myGeaSiMool_ImageBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="30dp"
+                        android:layout_weight="0.20"
+                        android:background="@mipmap/board"
+                        android:onClick="onClick" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.04" />
+
+                    <ImageButton
+                        android:id="@+id/insert_Memo_Btn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.20"
+                        android:background="@mipmap/writer"
+                        android:onClick="onClick"
+                        android:text="글쓰기" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.04" />
+
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/ListView_LinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"
+                android:background="@drawable/xml_border"
+                android:orientation="vertical">
+
+                <ListView
+                    android:id="@+id/board_listView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.1"
+                android:background="#112820"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/page_previous"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@mipmap/before"
+                    android:onClick="onClick" />
+
+                <Button
+                    android:id="@+id/page_1"
+                    style="@android:style/Widget.DeviceDefault.Button.Borderless"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClick"
+                    android:text="1"
+                    android:textColor="@android:color/white" />
+
+
+                <Button
+                    android:id="@+id/page_2"
+                    style="@android:style/Widget.DeviceDefault.Button.Borderless"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClick"
+                    android:text="2"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/page_3"
+                    style="@android:style/Widget.DeviceDefault.Button.Borderless"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClick"
+                    android:text="3"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/page_4"
+                    style="@android:style/Widget.DeviceDefault.Button.Borderless"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClick"
+                    android:text="4"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/page_5"
+                    style="@android:style/Widget.DeviceDefault.Button.Borderless"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClick"
+                    android:text="5"
+                    android:textColor="@android:color/white" />
+
+                <ImageButton
+                    android:id="@+id/page_next"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@mipmap/after"
+                    android:onClick="onClick"
+                    android:text="다음" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>
